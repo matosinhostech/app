@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, Text, StyleSheet } from "react-native";
+import { ImageBackground, Text, StyleSheet, View } from "react-native";
 import { InnerContainer, PageTitle, StyledFormArea, StyledButton, ButtonText, Line, HomeContainer, Avatar, LeftIcon, Colors } from "../components/style";
 import { StatusBar } from "expo-status-bar";
 
@@ -17,17 +17,17 @@ const Home = ({navigation}) => {
                     <Avatar resizeMode="cover" source={ require('../assets/transferir.png') } />
                         <Text style={styles.title}>matosinhos.tech</Text>
                         <StyledButton onPress={() => navigation.navigate('Events')}>
-                            <ButtonText>
+                            <ButtonText style={{fontFamily: 'monospace'}}>
                                 Events
                             </ButtonText>
                         </StyledButton>
                     <StyledButton onPress={() => navigation.navigate('Partners')}>
-                            <ButtonText>
+                            <ButtonText style={{fontFamily: 'monospace'}}>
                                 Partners
                             </ButtonText>
                         </StyledButton>
                         <StyledButton onPress={() => navigation.navigate('Videos')}>
-                            <ButtonText>
+                            <ButtonText style={{fontFamily: 'monospace'}}>
                                 Videos
                             </ButtonText>
                         </StyledButton>
@@ -41,10 +41,14 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     title: {
       color: Colors.secondary,
-      fontSize: 23,
+      fontSize: 30,
       paddingBottom: 25,
       textAlign: "center",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      fontFamily: 'monospace',
+      width: 300,
+      opacity: 1,
+      marginLeft: -62
     },
   });
 

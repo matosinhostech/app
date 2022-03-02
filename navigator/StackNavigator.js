@@ -4,6 +4,7 @@ import Home from "../screen/home";
 import Events from "../screen/events";
 import Partners from "../screen/partners";
 import Videos from "../screen/videos";
+import Video1 from "../screen/eventVideo/video1"
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -29,6 +30,7 @@ const RootStack = () => {
                 <Stack.Screen name="Events" component={Events} options={{title: 'Back', headerShown: true, headerTransparent: true}}/>
                 <Stack.Screen name="Partners" component={Partners} options={{title: 'Back', headerShown: true, headerTransparent: true}}/>
                 <Stack.Screen name="Videos" component={Videos} options={{title: 'Back', headerShown: true, headerTransparent: true}}/>
+                <Stack.Screen name="Video" component={Video1} options={{title: 'Back', headerShown: true, headerTransparent: true}}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
