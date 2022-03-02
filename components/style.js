@@ -12,9 +12,10 @@ export const Colors = {
     brand: "#6D28D9",
     green: "#10B981",
     red: "#EF4444", 
+    mediumSeaGreen: "#3CB371",
 };
 
-const {primary, secondary, tertiary, darkLight, brand, green, red} = Colors;
+const {primary, secondary, tertiary, darkLight, brand, green, red, mediumSeaGreen} = Colors;
 
 // created component as a View and its the container itself
 export const StyledContainer = styled.View`
@@ -58,7 +59,7 @@ export const PageTitle = styled.Text`
     font-weight: bold;
     color: ${tertiary};
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 60px;
 
     ${(props) => props.home && `
         font-size: 35px;
@@ -157,13 +158,16 @@ export const Line = styled.View`
 export const Card = styled.View`
     border-radius: 6px;
     elevation: 3;
-    background-color: ${primary};
+    background-color: ${mediumSeaGreen};
     shadow-offset: {width: 1px, height: 1px};
     shadow-color: #333;
     shadow-opacity: 0.3;
     shadow-radius: 2px;
     margin-horizontal: 4px;
     margin-vertical: 6px;
+    width: 360px;
+    height: 200px;
+    margin-bottom: 20px;
 `;
 
 export const CardContent = styled.View`
