@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 
 const Partners = () => {
 
-    return ( // <> </> means that all components should be wrapped in a parent element. Its a first-class component
+    return (
         <> 
             <StatusBar style="dark" />
             <Maps />
