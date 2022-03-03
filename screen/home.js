@@ -41,8 +41,8 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     title: {
       color: Colors.secondary,
-      fontSize: 23,
-      paddingBottom: 25,
+      fontSize: 20,
+      paddingBottom: 20,
       textAlign: "center",
       fontWeight: "bold"
     },
