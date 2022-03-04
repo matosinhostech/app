@@ -1,11 +1,17 @@
 import React, {useEffect, useState} from "react";
-import { ImageBackground, VideoPlayer, iframe, View } from "react-native";
+import { ImageBackground, View, Button, StyleSheet  } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { Video } from 'expo-av';
 
 
 const image = { uri: "https://st3.idealista.pt/news/arquivos/2020-07/pedro-menezes-zevlhievs5a-unsplash.jpg?sv=hKKKA3h4" };
 
+///https://player.vimeo.com/video/676381927?h=9901e6196c
+
 const Video1 = () => {
+
+    const video = React.useRef(null);
+    const [status, setStatus] = React.useState({});
 
     return ( 
         <> 
@@ -18,11 +24,55 @@ const Video1 = () => {
             blurRadius={4}
             />
 
+            <View style={styles.container}>
+
+            <Video
+            ref={video}
+            source={{url: "https://player.vimeo.com/video/676381927?h=9901e6196c"}}
+            useNativeControls
+            resizeMode="contain"
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            />
+
+            <View style={styles.buttons}>
+
+            <Button
+            title={status.isPlaying ? 'Pause' : 'Play'}
+            onPress={() =>
+            status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
+            }
+            />
+            </View>
+
+            </View>
+
         </>
 
     );
     
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+    },
+    video: {
+      alignSelf: 'center',
+      width: 320,
+      height: 200,
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    },
+    buttons: {
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+})
 
 export default Video1;
 
