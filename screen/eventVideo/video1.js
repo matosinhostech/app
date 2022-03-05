@@ -3,16 +3,21 @@ import { ImageBackground, View, Button, StyleSheet  } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Video } from 'expo-av';
 
+
 const image = { uri: "https://st3.idealista.pt/news/arquivos/2020-07/pedro-menezes-zevlhievs5a-unsplash.jpg?sv=hKKKA3h4" };
 
+
 const Video1 = () => {
+
 
     const video = React.useRef(null);
     const [status, setStatus] = React.useState({});
 
+
     return (<>
          
             <StatusBar style="dark" />
+
 
             <ImageBackground 
                         source={image} 
@@ -41,8 +46,8 @@ const Video1 = () => {
             <Button
                         title={status.isPlaying ? 'Pause' : 'Play'}
                         onPress={() =>
-                        status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
-            }
+                        status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()}
+            
             />
 
             </View>
@@ -56,11 +61,15 @@ const Video1 = () => {
 }
 
 const styles = StyleSheet.create({
-    container: {
+
+    container: 
+    {
       flex: 1,
       justifyContent: 'center',
     },
-    video: {
+
+    video: 
+    {
       alignSelf: 'center',
       width: 320,
       height: 200,
@@ -69,11 +78,14 @@ const styles = StyleSheet.create({
       left: 0,
       right: 0,
     },
-    buttons: {
+
+    buttons: 
+    {
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
     },
+
 })
 
 export default Video1;
