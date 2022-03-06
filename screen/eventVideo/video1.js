@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import { ImageBackground, View, Button, StyleSheet, Text, Image  } from "react-native";
+import { ImageBackground, SafeAreaView, View, Button, StyleSheet, Text, Image  } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { Video } from 'expo-av';
-
+import { WebView } from 'react-native-webview';
+import { Vimeo } from 'react-native-vimeo-iframe'
 
 const image = { uri: "https://st3.idealista.pt/news/arquivos/2020-07/pedro-menezes-zevlhievs5a-unsplash.jpg?sv=hKKKA3h4" };
 
@@ -15,10 +15,8 @@ const Video1 = () => {
 
 
     return (<>
-         
-
+        
             <StatusBar style="dark" />
-
 
             <ImageBackground 
                 source={image} 
@@ -27,33 +25,24 @@ const Video1 = () => {
                 blurRadius={4}/>
             
 
-            <View style={styles.container1}>
-
-
-            <Video
-                style={{width: 350, height: 300, marginTop: 150, marginLeft: 21}}
-                ref={video}
-                source={{uri: "https://player.vimeo.com/video/676381927?h=9901e6196c"}}
-                useNativeControls
-                resizeMode="contain"
-                isLooping
-                onPlaybackStatusUpdate={status => setStatus(() => status)}/>
-            
-
-            <View style={styles.buttons}>
-
-
-            <Button
-                title={status.isPlaying ? 'Pause' : 'Play'}
-                onPress={() =>
-                status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()}/> 
-            
-
-            </View>
-
-            </View>
-
+            <View style={styles.container1}/>
              
+            <SafeAreaView style={styles.container}>
+              <View style={styles.mainContainer}>
+                <Vimeo
+                    videoId={'676381927'}
+                    onReady={() => console.log('Video is ready')}
+                    onPlay={() => console.log('Video is playing')}
+                    onPlayProgress={(data) => console.log('Video progress data:', data)}
+                    onFinish={() => console.log('Video is finished')}
+                    loop={false}
+                    autoPlay={true}
+                    controls={true}
+                    speed={false}
+                  />
+              </View>
+            </SafeAreaView>
+            
             <View style =  
              {{    
                 flexDirection: 'row',                
@@ -74,7 +63,7 @@ const Video1 = () => {
                 backgroundColor: '#fff',
                 opacity: 0.87,
                 paddingTop: 7,
-                height: 50,                                                
+                height: 100,                                                
              }}>
 
         
@@ -122,13 +111,16 @@ const styles = StyleSheet.create({
       right: 0,
     },
 
-    buttons: 
-    {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
+    container: {
+      flex: 1,
+      backgroundColor: 'white',
     },
 
+    mainContainer: {
+      flex: 1,
+      justifyContent: 'space-between',
+      paddingHorizontal: 1,
+    },
 })
 
 export default Video1; 
