@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { ImageBackground, SafeAreaView, View, Button, StyleSheet, Text, Image  } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { WebView } from 'react-native-webview';
 import { Vimeo } from 'react-native-vimeo-iframe'
 
 const image = { uri: "https://st3.idealista.pt/news/arquivos/2020-07/pedro-menezes-zevlhievs5a-unsplash.jpg?sv=hKKKA3h4" };
@@ -27,8 +26,11 @@ const Video1 = () => {
 
             <View style={styles.container1}/>
              
+             
             <SafeAreaView style={styles.container}>
+
               <View style={styles.mainContainer}>
+
                 <Vimeo
                     videoId={'676381927'}
                     onReady={() => console.log('Video is ready')}
@@ -36,19 +38,20 @@ const Video1 = () => {
                     onPlayProgress={(data) => console.log('Video progress data:', data)}
                     onFinish={() => console.log('Video is finished')}
                     loop={false}
-                    autoPlay={true}
+                    autoPlay={false}
                     controls={true}
-                    speed={false}
-                  />
+                    speed={false}/>
+
               </View>
+              
             </SafeAreaView>
             
+
             <View style =  
              {{    
                 flexDirection: 'row',                
                 flex: 0.5,
                 width: '88%',
-                paddingTop: 70,
                 marginVertical: 50,
                 marginHorizontal: 23, 
                 padding: 8, 
@@ -63,17 +66,16 @@ const Video1 = () => {
                 backgroundColor: '#fff',
                 opacity: 0.87,
                 paddingTop: 7,
-                height: 100,                                                
+                height: 100,     
+                marginTop: -100,                                          
              }}>
 
         
-        
         <Image 
         style={{ width: 80, height:100, borderRadius: 12,}}
-        source={require('./roberto.png') }
-        /> 
+        source={require('./roberto.png') }/> 
         
-
+        
         <View>
         <Text style={{
                       fontSize: 15, 
@@ -96,30 +98,24 @@ const styles = StyleSheet.create({
 
     container1: 
     {
-      flex: 1,
+      flex: 0,
       justifyContent: 'center',
     },
 
-    video: 
+    container: 
     {
-      alignSelf: 'center',
-      width: 320,
-      height: 200,
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-    },
-
-    container: {
       flex: 1,
-      backgroundColor: 'white',
     },
 
-    mainContainer: {
+    mainContainer: 
+    {
       flex: 1,
       justifyContent: 'space-between',
-      paddingHorizontal: 1,
+      paddingVertical: 170,
+      paddingTop: 150,
+      marginBottom: 10,
+      width: '90%',
+      marginLeft: 16,
     },
 })
 
