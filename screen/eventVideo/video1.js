@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { ImageBackground, SafeAreaView, View, Button, StyleSheet, Text, Image  } from "react-native";
+import { ImageBackground, SafeAreaView, View, StyleSheet, Text, Image  } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Vimeo } from 'react-native-vimeo-iframe'
 
@@ -73,7 +73,7 @@ const Video1 = () => {
         
         <Image 
         style={{ width: 80, height:100, borderRadius: 12,}}
-        source={require('./roberto.png') }/> 
+        source={require('../../assets/roberto.png') }/> 
         
         
         <View>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
       paddingTop: 150,
       marginBottom: 10,
       width: '90%',
-      marginLeft: 16,
+      marginLeft: 19,
     },
 })
 
