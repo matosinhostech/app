@@ -11,11 +11,13 @@ export const Colors = {
     darkLight: "#9CA3AF",
     brand: "#6D28D9",
     green: "#10B981",
-    red: "#EF4444", 
+    red: "#FF0000", 
     mediumSeaGreen: "#3CB371",
+    darkslategrey: "#2F4F4F",
+    dimGrey: "#696969"
 };
 
-const {primary, secondary, tertiary, darkLight, brand, green, red, mediumSeaGreen} = Colors;
+const {primary, secondary, tertiary, darkLight, brand, green, red, mediumSeaGreen, darkslategrey, dimGrey} = Colors;
 
 // created component as a View and its the container itself
 export const StyledContainer = styled.View`
@@ -122,9 +124,30 @@ export const StyledButton = styled.TouchableOpacity`
     opacity: 0.8;
 `;
 
+export const StyledButtonEvent = styled.TouchableOpacity`
+    padding-bottom: 4px;
+    background-color: ${red};
+    align-items: center;
+    border-radius: 15px;
+    height: 30px;
+    width: 150px;
+    border-width: 2px;
+    border-color: ${secondary};
+    opacity: 0.8;
+    margin-left: 200px;
+`;
+
+
 export const ButtonText = styled.Text`
     color: ${tertiary};
     font-size: 23px;
+    font-weight: bold;
+
+`;
+
+export const ButtonTextEvent = styled.Text`
+    color: ${primary};
+    font-size: 15px;
     font-weight: bold;
 
 `;
@@ -158,7 +181,7 @@ export const Line = styled.View`
 export const Card = styled.View`
     border-radius: 6px;
     elevation: 3;
-    background-color: ${mediumSeaGreen};
+    background-color: ${primary};
     shadow-offset: {width: 1px, height: 1px};
     shadow-color: #333;
     shadow-opacity: 0.3;
@@ -166,8 +189,8 @@ export const Card = styled.View`
     margin-horizontal: 4px;
     margin-vertical: 6px;
     width: 360px;
-    height: 200px;
-    margin-bottom: 20px;
+    height: 240px;
+    margin-top: 240px;
 `;
 
 export const CardContent = styled.View`
