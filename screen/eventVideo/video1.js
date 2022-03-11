@@ -73,7 +73,7 @@ const Video1 = () => {
         
         <Image 
         style={{ width: 80, height:100, borderRadius: 12,}}
-        source={require('../../assets/roberto.png') }/> 
+        source={require('../../assets/robertoSousa.png') }/> 
         
         
         <View>
