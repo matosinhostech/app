@@ -1,6 +1,6 @@
 export const list = [
     {
-        id: 1,
+        key: 1,
         title: "Crypto Payments",
         author: "Roberto Sousa",
         date: "February 10th 2022",
@@ -9,7 +9,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 2,
+        key: 2,
         title: "Open Source",
         author: "Tiago Barbosa",
         date: "February 10th 2022",
@@ -18,7 +18,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 3,
+        key: 3,
         title: "AI Reconition",
         author: "Andreia Sousa",
         date: "November 26th 2021",
@@ -27,7 +27,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 4,
+        key: 4,
         title: "Design System",
         author: "Henrique Macedo",
         date: "November 26th 2021",
@@ -36,7 +36,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 5,
+        key: 5,
         title: "What is ML, and what is definitely not..",
         author: "Sara Pinto",
         date: "September 30th 2021",
@@ -45,7 +45,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 6,
+        key: 6,
         title: "Software Architecture",
         author: "Luís Ramos",
         date: "September 30th 2021",
@@ -54,7 +54,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 7,
+        key: 7,
         title: "Project Analysis for Software Houses",
         author: "André Silva",
         date: "February 26th 2021",
@@ -63,7 +63,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 8,
+        key: 8,
         title: "A Random Walk to YC",
         author: "Pedro Pregueiro",
         date: "June 18th 2021",
@@ -72,7 +72,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 9,
+        key: 9,
         title: "Survival kit to build your POC",
         author: "Márcio Pinto",
         date: "April 30th 2021",
@@ -81,7 +81,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 10,
+        key: 10,
         title: "Let the travel begin",
         author: "José Pereira",
         date: "June 18th 2021",
@@ -90,7 +90,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 11,
+        key: 11,
         title: "Neural-network monitoring",
         author: "José Ferrão, Nelson Campos",
         date: "April 30th 2021",
@@ -99,7 +99,7 @@ export const list = [
         url: "https://www.matosinhos.tech/videos#playing"
     },
     {
-        id: 12,
+        key: 12,
         title: "Content Media Distribution",
         author: "Francisco Sales",
         date: "February 26th 2021",
