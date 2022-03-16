@@ -31,9 +31,9 @@ const Videos = ({navigation}) => {
                 data={list}
                 keyExtractor={item => item.id}
  
-                    renderItem={({item, index}) => {
+                    renderItem={({item}) => (
 
-                        return  <TouchableOpacity onPress={() => {navigation.navigate('Video')}}>
+                        <TouchableOpacity onPress={() => {navigation.navigate(item.key)}}>
                         
                         <View style = {{
                                         flexDirection: 'row', 
@@ -88,7 +88,7 @@ const Videos = ({navigation}) => {
 
                         </TouchableOpacity> 
 
-                    }} 
+                  )} 
 
                 /> 
 
