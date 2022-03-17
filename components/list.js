@@ -1,7 +1,6 @@
 export const list = [
     {
         id: 1,
-        key: 'Video',
         title: "Crypto Payments",
         author: "Roberto Sousa",
         date: "February 10th 2022",
@@ -11,7 +10,6 @@ export const list = [
     },
     {
         id: 2,
-        key: 'Video',
         title: "Open Source",
         author: "Tiago Barbosa",
         date: "February 10th 2022",
@@ -21,7 +19,6 @@ export const list = [
     },
     {
         id: 3,
-        key: 'Video',
         title: "AI Reconition",
         author: "Andreia Sousa",
         date: "November 26th 2021",
@@ -31,7 +28,6 @@ export const list = [
     },
     {
         id: 4,
-        key: 'Video',
         title: "Design System",
         author: "Henrique Macedo",
         date: "November 26th 2021",
@@ -41,7 +37,6 @@ export const list = [
     },
     {
         id: 5,
-        key: 'Video',
         title: "What is ML, and what is definitely not..",
         author: "Sara Pinto",
         date: "September 30th 2021",
@@ -51,7 +46,6 @@ export const list = [
     },
     {
         id: 6,
-        key: 'Video',
         title: "Software Architecture",
         author: "Luís Ramos",
         date: "September 30th 2021",
@@ -61,7 +55,6 @@ export const list = [
     },
     {
         id: 7,
-        key: 'Video',
         title: "Project Analysis for Software Houses",
         author: "André Silva",
         date: "February 26th 2021",
@@ -71,7 +64,6 @@ export const list = [
     },
     {
         id: 8,
-        key: 'Video',
         title: "A Random Walk to YC",
         author: "Pedro Pregueiro",
         date: "June 18th 2021",
@@ -81,7 +73,6 @@ export const list = [
     },
     {
         id: 9,
-        key: 'Video',
         title: "Survival kit to build your POC",
         author: "Márcio Pinto",
         date: "April 30th 2021",
@@ -91,7 +82,6 @@ export const list = [
     },
     {
         id: 10,
-        key: 'Video',
         title: "Let the travel begin",
         author: "José Pereira",
         date: "June 18th 2021",
@@ -101,7 +91,6 @@ export const list = [
     },
     {
         id: 11,
-        key: 'Video',
         title: "Neural-network monitoring",
         author: "José Ferrão, Nelson Campos",
         date: "April 30th 2021",
@@ -111,7 +100,6 @@ export const list = [
     },
     {
         id: 12,
-        key: 'Video',
         title: "Content Media Distribution",
         author: "Francisco Sales",
         date: "February 26th 2021",

@@ -33,7 +33,7 @@ const Videos = ({navigation}) => {
  
                     renderItem={({item}) => (
 
-                        <TouchableOpacity onPress={() => {navigation.navigate(item.key)}}>
+                        <TouchableOpacity onPress={() => {navigation.navigate('Video', item)}}>
                         
                         <View style = {{
                                         flexDirection: 'row', 
