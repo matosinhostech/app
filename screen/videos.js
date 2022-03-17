@@ -29,11 +29,10 @@ const Videos = ({navigation}) => {
                 {{padding: 20, paddingTop: StatusBar.currentHeight || 60}}  
                 
                 data={list}
-                keyExtractor={item => item.id}
  
-                    renderItem={({item}) => (
+                    renderItem={({item, index}) => (
 
-                        <TouchableOpacity onPress={() => {navigation.navigate('Video', item)}}>
+                        <TouchableOpacity onPress={() => {navigation.navigate('Video', item, index)}}>
                         
                         <View style = {{
                                         flexDirection: 'row', 

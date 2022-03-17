@@ -37,7 +37,6 @@ const Video1 = () => {
                     {{padding: 20, paddingTop: StatusBar.currentHeight || 60}}  
                     
                     data={list}
-                    keyExtractor={item => item.id}
 
                         renderItem={({item}) => console.log(item.videoID)
                           // <>
